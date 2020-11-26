@@ -25,12 +25,12 @@ class Ball:
               self.yspeed = -self.yspeed
           if pos[2] >= WIDTH or pos[0] <= 0:
               self.xspeed = -self.xspeed
-     
+
 
 newball = Ball("red", 50)
 newball2 = Ball ("green", 100)
 
-while True: 
+while True:
     newball.move()
     newball2.move()
     tk.update()

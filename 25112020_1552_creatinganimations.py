@@ -12,7 +12,6 @@ canvas.pack()
 
 
 
-
 ball = canvas.create_oval(10, 10, 60, 60, fill="orange")
 xspeed = 4
 yspeed = 5
@@ -21,12 +20,12 @@ ball2 = canvas.create_oval(100, 100, 60, 60, fill="purple")
 xspeed2 = 1
 yspeed2 = 3
 
-while True: 
+while True:
     canvas.move(ball, xspeed, yspeed)
     canvas.move(ball2, xspeed2, yspeed2)
     pos = canvas.coords(ball)
     pos2 = canvas.coords(ball2)
-    
+
     if pos[3] >= HEIGHT or pos[1] <= 0:
         yspeed = -yspeed
 
@@ -46,9 +45,9 @@ while True:
     if pos[2] == pos2[2] or pos[0] == pos2[0]:
         xspeed = -xspeed
         xspeed2 = -xspeed2
-        
+
     tk.update()
     time.sleep(0.01)
 
-    
+
 tk.mainloop()

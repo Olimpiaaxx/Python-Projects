@@ -30,11 +30,10 @@ balls = []
 for i in range(100):
     balls.append(Ball(random.choice(colors), random.randrange(50, 100)))
 
-while True: 
+while True:
     for ball in balls:
         ball.move()
     tk.update()
     time.sleep(0.01)
 
 tk.mainloop()
-
