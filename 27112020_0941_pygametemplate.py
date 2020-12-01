@@ -12,6 +12,7 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
+PINK = (255, 204, 204)
 COLOURS = [WHITE, BLACK, RED, GREEN, BLUE]
 
 # initialize pygame and create window
@@ -50,7 +51,7 @@ while running:
     # Update
 
     # Draw / render
-    screen.fill(GREEN)
+    screen.fill(PINK)
     screen.blit(textsurface,(text_pos_x, text_pos_y))
     #text_pos_x += i
     #text_pos_y += j
