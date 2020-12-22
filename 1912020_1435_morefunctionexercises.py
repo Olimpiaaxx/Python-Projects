@@ -25,6 +25,17 @@ def wordLength(word):
 #def numberCounter
 
 
+strx = 'Sylan?'
+print(len(strx))
+count = len(strx)
+
+print(strx[-1: ])
+
+
+
+
+
+
 
 
 #4
@@ -32,10 +43,11 @@ import random
 def randomQuestion(message):
     x = input(message)
     answers = ['yes', 'no']
-    if x == '?':
-        print(random.choice(answers))
+    if x[-1: ] == '?':
+        return random.choice(answers)   
     else:
-        print('error')
+        return 'Not a question'
+        
 print(randomQuestion('Ask me a question: '))
 
 
