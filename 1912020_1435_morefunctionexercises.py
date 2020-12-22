@@ -1,5 +1,10 @@
 #1
-#def numberSorter(ls)
+ls = [3, 4, 6, 5, 1, 2]
+
+def numberSorter(ls):
+    ls.sort(reverse = False)
+    return ls
+print(numberSorter(ls))
 
 
 #2
@@ -25,15 +30,6 @@ def wordLength(word):
 #def numberCounter
 
 
-strx = 'Sylan?'
-print(len(strx))
-count = len(strx)
-
-print(strx[-1: ])
-
-
-
-
 
 
 
@@ -48,7 +44,7 @@ def randomQuestion(message):
     else:
         return 'Not a question'
         
-print(randomQuestion('Ask me a question: '))
+#print(randomQuestion('Ask me a question: '))
 
 
 
