@@ -1,10 +1,43 @@
 #1
-ls = [3, 4, 6, 5, 1, 2]
+#ls = [3, 4, 6, 5, 1, 2]
 
 def numberSorter(ls):
     ls.sort()
     return ls
 #print(numberSorter(ls))
+
+
+
+def addToList(lista2, newitem):
+    # assumption: lista2 is already sorted
+    if lista2 == []:
+        lista2.append(newitem)
+        return lista2
+    # find index
+    count = 0
+    for item2 in lista2:
+        if newitem <= item2:
+            break
+        count += 1
+    lista2.insert(count, newitem)
+    
+    
+            
+def listSorter(ls):
+    newlist = []
+    for item in ls:
+        addToList(newlist, item)
+    ls = newlist
+    return newlist
+
+
+
+lista = [6, 3, 5, 1, 4, 2,]
+
+sortedList = listSorter(lista)
+
+print(sortedList)
+
 
 
 #2
@@ -27,8 +60,14 @@ def wordLength(word):
 
 #3
 
-#def numberCounter
+#def numberCounter(word):
+    count = 0
+    for letter in word:
+        if letter.isdigit():
+            count = count + 1
+    return count
 
+#print('Your count is: ', numberCounter('gh764449g'))
 
 
 
@@ -65,14 +104,14 @@ def trueStatement(msg1, msg2):
 
 
 
-def pyramid(n):
+#def pyramid(n):
     for i in range(n):
         #for k in range(n-i):
            # print(' ', end='')
         for j in range(i + 1):
            print('/', end='')
         print()
-pyramid(5)
+#pyramid(5)
 
 
 
