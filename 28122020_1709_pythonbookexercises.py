@@ -73,18 +73,50 @@ print(x)
 
 
 
+#11
+
+x = 2
+def f(a):
+    x = a * a
+    return x
+y = f(3)
+print(x, y)
+
+
+#12
+def numberCounter(word):
+    count = 0
+    for letter in word:
+        if letter.isdigit():
+            count = count + 1
+    return count
+
+print('Your count is: ', numberCounter('gh764449g'))
+
+
+#13
+def trueStatement(msg1, msg2):
+    x = input(msg1)
+    y = input(msg2)
+    return x.casefold() == y.casefold()
+        
+#print(trueStatement('Type a word: ', 'Type another word: '))
+        
+
+#14
 
 
 
+#15
+x = 4
+y = 5
+p = x < y or x < z
+print(p)
 
-
-
-
-
-
-
-
-
+#16
+True, False = False, True
+print(True, False)
+print(2 < 3)
 
 
 
