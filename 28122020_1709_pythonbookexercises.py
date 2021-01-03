@@ -124,13 +124,24 @@ x[2] = 2
 print(x)
 
 
+#24
 
-#21
+def factorial(n):
+    return n*n
 
-def product(number):
-    return sum
+print(factorial(4))
 
-print(product([1, 2, 3]))
+
+#25
+lst = [1, 2, 3, 4]
+lst.reverse()
+print(lst)
+    
+
+
+
+
+
 
 
 
