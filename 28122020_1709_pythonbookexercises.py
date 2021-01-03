@@ -113,10 +113,29 @@ y = 5
 p = x < y or x < z
 print(p)
 
-#16
-True, False = False, True
-print(True, False)
-print(2 < 3)
+
+#20
+x = [0, 1, [2]]
+x[2][0] = 3
+print(x)
+x[2].append(4)
+print(x)
+x[2] = 2
+print(x)
+
+
+
+#21
+
+def product(number):
+    return sum
+
+print(product([1, 2, 3]))
+
+
+
+
+
 
 
 
