@@ -141,6 +141,68 @@ print(lst)
 
 
 
+#29
+def unique(list1): 
+    unique_list = [] 
+    for x in list1: 
+        if x not in unique_list: 
+            unique_list.append(x)
+    unique_list.sort()
+    for i in range(len(unique_list)):
+        if i == len(unique_list) - 1:
+            print(str(unique_list[i]), end='')
+        else:
+            print(str(unique_list[i]) + ',', end='')
+
+unique([1, 8, 9, 8, 3, 1, 8])
+
+#30
+def dups(lista):
+    dups_list = []
+    for x in lista
+
+
+
+
+
+
+
+
+
+
+
+
+
+ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Print each item
+# Print index of each item
+# Print index of each items starting with the last 
+# Print all items except the last
+# Print all items except the first
+# Print all items reversed without using .reverse function
+# Print every other item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
