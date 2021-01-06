@@ -1,4 +1,4 @@
-ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ls = [1555, 772, 34, 64, 5, 26, 77, 38, 94, 140]
 
 
 
@@ -10,13 +10,16 @@ for i in range(len(ls)):
     print(i)
 
 #Print index of each items starting with the last
-i = 0
-while i < len(ls):
-    print(i)
-i = i - 1
-  
-    
-    
+
+index = len(ls) - 1
+while index >= 0:
+    print(index)
+    index -= 1
+
+a = len(ls) -1
+while a >= 0:
+    print(ls[a])
+    a -= 2
 
 #Print all items except the last
 print(ls[:-1])
@@ -25,10 +28,17 @@ print(ls[:-1])
 print(ls[1:])
 
 #Print all items reversed without using .reverse function
-
+   
+b = len(ls) - 1
+while b >= 0:
+    print(ls[b])
+    b -= 1
 
 #Print every other item
 
-
+a = len(ls) -1
+while a >= 0:
+    print(ls[a])
+    a -= 2
 
 
