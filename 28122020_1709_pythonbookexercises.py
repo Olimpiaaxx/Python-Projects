@@ -157,15 +157,6 @@ def unique(list1):
 unique([1, 8, 9, 8, 3, 1, 8])
 
 #30
-def dups(lista):
-    dups_list = []
-    for x in lista:
-        dups_list.append(x)
-        print(dups_list)
-        if x in dups_list:
-            dups_list.remove(x)
-
-dups([1, 2, 3, 1, 7, 3])
 
 
 
@@ -181,6 +172,36 @@ dups([1, 2, 3, 1, 7, 3])
 
 
 
+#32
+def addToList(lista2, newitem):
+    # assumption: lista2 is already sorted
+    if lista2 == []:
+        lista2.append(newitem)
+        return lista2
+    # find index
+    count = 0
+    for item2 in lista2:
+        if newitem <= item2:
+            break
+        count += 1
+    lista2.insert(count, newitem)
+    
+    
+            
+def listSorter(ls):
+    newlist = []
+    for item in ls:
+        addToList(newlist, item)
+    ls = newlist
+    return newlist
+
+
+
+lista = ['hello', 'hi', 'hey']
+
+sortedList = listSorter(lista)
+
+print(sortedList)
 
 
 
@@ -191,6 +212,10 @@ dups([1, 2, 3, 1, 7, 3])
 
 
 
+#34
+
+unique_list = set([1, 4, 2, 4, 3, 1])
+print(unique_list)
 
 
 
