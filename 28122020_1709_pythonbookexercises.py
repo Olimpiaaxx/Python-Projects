@@ -159,29 +159,14 @@ unique([1, 8, 9, 8, 3, 1, 8])
 #30
 def dups(lista):
     dups_list = []
-    for x in lista
+    for x in lista:
+        dups_list.append(x)
+        print(dups_list)
+        if x in dups_list:
+            dups_list.remove(x)
 
+dups([1, 2, 3, 1, 7, 3])
 
-
-
-
-
-
-
-
-
-
-
-
-ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# Print each item
-# Print index of each item
-# Print index of each items starting with the last 
-# Print all items except the last
-# Print all items except the first
-# Print all items reversed without using .reverse function
-# Print every other item
 
 
 
