@@ -93,7 +93,7 @@ def trueStatement(msg1, msg2):
     y = input(msg2)
     return x.casefold() == y.casefold()
         
-#print(trueStatement('Type a word: ', 'Type another word: '))
+print(trueStatement('Type a word: ', 'Type another word: '))
         
 
 
@@ -105,12 +105,12 @@ def trueStatement(msg1, msg2):
 
 
 #def pyramid(n):
-    for i in range(n):
-        #for k in range(n-i):
-           # print(' ', end='')
-        for j in range(i + 1):
-           print('/', end='')
-        print()
+    #for i in range(n):
+     #   #for k in range(n-i):
+      #     # print(' ', end='')
+       # for j in range(i + 1):
+        #   print('/', end='')
+        #print()
 #pyramid(5)
 
 
