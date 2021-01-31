@@ -6,42 +6,55 @@ class Solution(object):
         """
         # Check if a list is valid
  
-        for ls in board:
-            for i in range(len(ls)):
-                if ls[i] in ls[:i] and ls[i] != '.':
-                    return False
-
-        #for j in range(9):
-          #  item_to_compare = board[0][0]
-            #for i in range(len(board)):
-        #        if board[i][0] == item_to_compare and i != 0:
-         ###           return False 
         for i in range(len(board)):
             for j in range(len(board[i])):
-              #  print(board[i][j])
+
+                if board[i][j] == '.':
+                    continue
+                
+                # first requirement
+                if board[i][j] in board[i][:j]:
+                    return False
+                
+                # second requirement
                 for k in range(len(board)):
-                    #print(board[k][j])
-                    if board[i][j] == board[k][j] and (k != i and board[i][j] != '.'):
-                        #print(i, j, k)
+                    if board[i][j] == board[k][j] and k != i:
                         return False
-                        
+                    
+                # third requirement
+                # 
+                offseti = 0
+                offsetj = 0
+                if i > 2:
+                    offseti = 3
+                if i > 5:
+                    offseti = 6
+                if j > 2:
+                    offsetj = 3
+                if j > 5:
+                    offsetj = 6
+                for k in range(3):
+                    for l in range(3):
+                        if board[i][j] == board[k + offseti][l + offsetj] and (i != k + offseti and j != l + offsetj):
+                            return False
 
-
+       
 
         return True
+
 
                 
 
 # Solution
-test_list = [["5","3",".",".","2","1",".",".","."],
-             ["3","2",".","1","9","5",".",".","."],
+test_list = [["5","3",".",".","2",".",".",".","."],
+             [".","2",".","1","9","5",".",".","."],
              [".","9","8",".",".",".",".","6","."],
              ["8",".",".",".","6",".",".",".","3"],
              ["4",".",".","8",".","3",".",".","1"],
              ["7",".",".",".",".",".",".",".","6"],
-             [".","6",".",".",".",".","2","8","."],
+             [".","6",".",".",".",".",".","8","."],
              [".",".",".","4","1","9",".",".","5"],
-             [".",".",".",".","8",".",".","7","9"]]
+             [".",".",".",".","8",".",".","7","2"]]
 
 
 my_solution = Solution()
