@@ -8,8 +8,8 @@ class Solution(object):
 
         new_list = []
         for i in range(len(nums)):
-            next_item = i + 1
-            if nums[i] + nums[next_item] == target:
+            a = target - i
+            if nums[i] + nums[a] == target:
                 return True
             else:
                 continue
