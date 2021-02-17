@@ -6,17 +6,10 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        new_list = []
         for i in range(len(nums)):
-            a = target - i
-            if nums[i] + nums[a] == target:
-                return True
-            else:
-                continue
-                if True:
-                    new_list.append(nums[i], nums[next_item])
-            return new_list
-
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return(i, j)
 
 
 
