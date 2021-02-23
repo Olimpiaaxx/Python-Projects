@@ -1,15 +1,15 @@
 import re
 
-my_list = ['!Sylan', 'Sylan', '@!Olimpia', 'Olaf', '###Magda', 'olek']
+my_list = ['Sylan', 'Sylan', 'Olimpia', 'Olaf', 'Magda', 'olek']
 new_dict = {}
 new_list = []
 
 for item in my_list:
-    #check for any special charactrs
-    if any(c in my_list[0] for c in item[0]):
-        print("yes")
-    else:
-        print("no")
+    ##check for any special charactrs
+    #if any(c in my_list[0] for c in item[0]):
+    #    print("yes")
+   # else:
+   #     print("no")
 
     char = item[0]
     char = char.lower()
