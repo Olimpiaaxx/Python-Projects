@@ -12,7 +12,7 @@ class Solution(object):
         return len(nums)
         
 # Solution
-test_list = [0,0,1,1,1,2,2,3,3,4]
+test_list = [0,0, 1, 2]
 
 my_solution = Solution()
 

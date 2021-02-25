@@ -6,6 +6,7 @@ class Solution(object):
 			    temp = nums[last_item - i]
 			    nums.remove(nums[last_item -i])
 			    nums.append(temp)
+			    
 	    print(nums)
 
 
@@ -32,4 +33,4 @@ test_list = [0, 1, 0, 3, 12]
 
 my_solution = Solution()
 
-my_solution.moveZeroes(test_list)
+print(my_solution.moveZeroes(test_list))

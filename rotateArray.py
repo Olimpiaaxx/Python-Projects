@@ -30,6 +30,6 @@ class Solution2(object):
 test_list = [1, 2, 3, 4, 5, 6, 7]
 k = 3
 
-my_solution = Solution2()
+my_solution = Solution()
 my_solution.rotate(test_list, k)
 print(test_list)
