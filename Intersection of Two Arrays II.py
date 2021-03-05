@@ -6,21 +6,23 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        nums3 = []
+        dict1 = {}
         nums1.sort()
         nums2.sort()
 
-        for i in range(len(nums2)):
-            if nums2[i] not in nums1:
-                pass
+        for i in nums1:
+            if i not in dict1:
+                dict1[i] = 1   
             else:
-                nums3.append(nums2[i])
-                #nums2.remove(nums2[i])
-                
-           # if nums1[i] in nums2:
-              #  nums3.append(nums1[i])
-             #   nums1.remove(nums1[i])
-            return nums3
+                dict1[i] += 1
+        nums3 = []
+
+        for i in nums2:
+            if i in dict1 and dict1[i]:
+                dict1[i] -= 1
+                nums3.append(i)
+
+        return nums3
             
 
 
