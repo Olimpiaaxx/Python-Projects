@@ -9,12 +9,23 @@ class Solution(object):
         last_item = len(digits) -1
         for i in range(len(digits)):
             digits[last_item] += 1
-            print(digits)
-            if digits[last_item] > 9:
+
+            while last_item - i > 9:
                 new_digits = list(map(int, str(digits[last_item])))
                 digits.remove(digits[last_item])
                 digits += new_digits
             return digits
+
+
+       # last_item = len(digits) -1
+        #next_item = last_item -1
+        #for i in range(len(digits)):
+         #   digits[last_item] += 1
+         #   if digits[last_item] > 9:
+        #        new_digits = list(map(int, str(digits[last_item])))
+         #       digits.remove(digits[last_item])
+        #        digits += new_digits
+         #   return digits
 
 
 
@@ -28,7 +39,7 @@ class Solution(object):
 
 #Solution
 
-test_list = [2, 9]
+test_list = [2, 9, 9]
 9,9
 
 my_solution = Solution()
