@@ -1,38 +1,26 @@
 class Solution(object):
-    def firstUniqChar(self, s):
+    def firstUniqChar(self, myWord):
         """
         :type s: str
         :rtype: int
         """
 
-
         my_dict = {}
 
-        for i in range(len(s)):
-            char = s[i]
-            if char not in my_dict:
-                my_dict.update({char: 1})
+        for i in range(len(myWord)):
+            if myWord[i] not in my_dict:
+                my_dict.update({myWord[i]: 1})
             else:
-                my_dict[char]+= 1
-            for char in range(len(my_dict)):
-                if my_dict[char] == 1:
-                    print('got it')
-    
-                
-        return my_dict
-class Solution2(object):
-    def firstUniqChar(self, s):
+                my_dict[myWord[i]]+= 1
+            
+        for character, count in my_dict.items():
+            if count == 1:
+                return myWord.index(character)
+        return -1
 
-        s = list(s)
-        s.sort()
-        for i in range(len(s) -1):
-            if s[i] != s[i +1]:
-                return i
-            else:
-                return -1
 
 
 # Solution
-test_list = 'oko'
-my_solution = Solution2()
+test_list = 'leetcode'
+my_solution = Solution()
 print(my_solution.firstUniqChar(test_list))

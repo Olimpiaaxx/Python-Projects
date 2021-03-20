@@ -20,7 +20,7 @@ class Solution(object):
 
 #SOLUTION
 
-test_list = 0o0000000000000000000000010000000
+test_list = 0o0000000000000000000000000001011
 test_list2 = 21451
 
 my_solution = Solution()
