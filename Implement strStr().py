@@ -4,17 +4,24 @@ class Solution:
         #haystack = list(haystack)
        # needle = list(needle)
 
-        if not needle:
+       if not needle:
                 return 0
 
-        #for h_char in haystack:
-           # print(h_char)
+       for i in range(len(haystack)):
+           if needle[0] == i:
+               return haystack.index(needle[0])
+               
+           #for n_char in needle:
+              # if n_char == h_char:
+                  # return haystack.index(n_char)
+       return -1
 
-        for n_char in needle:
-            if n_char in haystack:
-                return haystack.index(n_char)
-            else:
-                return -1
+        
+
+
+        #if needle in haystack:
+          #  return haystack.index(needle)
+       # return -1
             
             
 
@@ -28,7 +35,7 @@ class Solution:
 
 #SOLUTION
 
-word1 = 'helo'
+word1 = 'hello'
 word2 = 'll'
 
 my_solution = Solution()
