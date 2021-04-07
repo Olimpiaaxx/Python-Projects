@@ -7,10 +7,19 @@ class Solution:
         if not needle:
                 return 0
 
-        for char in needle:
-            if char not in haystack or len(needle) > len(haystack):
-                return -1
-            return haystack.index(char)
+
+        for i in range(len(haystack)):
+            print(haystack[i])
+            #if needle[i] == haystack[i]:
+            #    continue
+            #else:
+              #  return False
+        #return haystack.index(needle[i])
+
+        #for char in needle:
+          #  if char not in haystack or len(needle) > len(haystack):
+           #     return -1
+           # return haystack.index(char)
                    
            #for n_char in needle:
               #  if n_char == h_char:
@@ -35,8 +44,8 @@ class Solution:
 
 #SOLUTION
 
-word1 = 'mississippi'
-word2 = 'mississippi'
+word1 = 'hello'
+word2 = 'll'
 
 my_solution = Solution()
 print(my_solution.strStr(word1, word2))

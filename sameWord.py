@@ -35,7 +35,7 @@ class Solution:
 #SOLUTION
 
 word1 = 'sylan'
-word2 = 'ylan'
+word2 = 'sylan'
 
 my_solution = Solution()
 
