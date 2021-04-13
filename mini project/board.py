@@ -26,13 +26,3 @@ class Board:
                 else:
                     print(list[i] + ' | ', end='')
             print('')
-
-
-b = Board()
-b.initialize()
-b.show()
-print(b.is_empty(1, 1))
-b.put(1, 1, 'x')
-print(b.is_empty(1, 1))
-b.show()
-print(b.get(1, 2))
