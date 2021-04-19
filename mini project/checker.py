@@ -10,13 +10,18 @@ class Checker:
         #right = check_pawn == self.board.get(x, y +1)
         #left = check_pawn == self.board.get(x, y -1)
 
-        while counter != self.winning_counter:
-            self.board.get(x, y +1) or self.board.get(x, y -1)
+        while check_pawn == self.board.get(x, y +1):
             counter += 1
+            if counter == self.winning_counter:
+                return 'you won'
+        return 'you lost'
 
 
-
-
+    #    if check_pawn == self.board.get(x +1, y):
+    #        counter += 1
+    #        if counter == self.winning_counter:
+    #            return 'you won'
+    #    return 'you lost'
 
 
 
@@ -26,4 +31,4 @@ class Checker:
         #    counter += 1
 
 
-        return counter == self.winning_counter
+        #return counter == self.winning_counter
